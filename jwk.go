@@ -10,7 +10,7 @@ import (
 )
 
 func main() {
-	file, _ := ioutil.ReadFile("/Users/bi001189/Downloads/brseal.key")
+	file, _ := ioutil.ReadFile("../brseal.key")
 	decode, _ := pem.Decode(file)
 
 	cert, err := x509.ParsePKCS8PrivateKey(decode.Bytes)
